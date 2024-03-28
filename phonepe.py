@@ -427,6 +427,8 @@ data = Top_user.values.tolist()
 cursor.executemany(insert_Query5,data)
 Data_Base.commit()
 
+#Here we coverting the data which we stored in SQL to a Data Frame
+
 
 Data_Base = psycopg2.connect(host = "localhost",
                             user = "postgres",
@@ -519,13 +521,13 @@ def Ttansaction_count_amount_analysis(dataFrame,Year):
     with column1:
 
         fig_amount = px.bar(Data_CA_group, x= "State", y= "Transaction_amount", title= f"Transaction_amount of {Year}", 
-                            color_discrete_sequence=px.colors.sequential.Bluered_r, pattern_shape_sequence=["|"],height = 550, width =500)
+                            color_discrete_sequence=px.colors.sequential.Magenta, height = 550, width =500)
         st.plotly_chart(fig_amount)
 
     with column2:
 
         fig_count = px.bar(Data_CA_group, x= "State", y= "Transaction_count", title= f"Transaction_count of {Year}" , 
-                            color_discrete_sequence=px.colors.sequential.Bluered_r, pattern_shape_sequence=["|"],height = 550, width =500)
+                            color_discrete_sequence=px.colors.sequential.Magenta, height = 550, width =500)
         st.plotly_chart(fig_count)
 
     column1, column2 = st.columns(2)
@@ -585,14 +587,14 @@ def Ttansaction_count_amount_analysis_Q(dataFrame, Quarter):
     with column1:
 
         fig_amount = px.bar(Data_CA_group, x= "State", y= "Transaction_amount", title= f"TRANSACTION COUNT QUARTER {Quarter} OF YEAR {Data_CA['Year'].unique()}", 
-                                color_discrete_sequence=px.colors.sequential.Bluered_r, pattern_shape_sequence=["|"],height = 550, width =500)
+                                color_discrete_sequence=px.colors.sequential. Magenta, height = 550, width =500)
 
         st.plotly_chart(fig_amount)
 
     with column2:
 
         fig_count = px.bar(Data_CA_group, x= "State", y= "Transaction_count", title= f"TRANSACTION AMOUNT QUARTER {Quarter} OF YEAR {Data_CA['Year'].unique()}" , 
-                                color_discrete_sequence=px.colors.sequential.Bluered_r, pattern_shape_sequence=["|"],height = 550, width =500)
+                                color_discrete_sequence=px.colors.sequential. Magenta, height = 550, width =500)
 
         st.plotly_chart(fig_count)
 
@@ -771,7 +773,7 @@ def Map_Registereduser_Appopens(dataFrame,Year):
 
 
     fig_map_ra = px.line(Data_Map_ra_g, x= "State", y= ["RegisteredUser", "AppOpens" ], title= f"REGISTEREDUSER COUNT OF {Year}", 
-                        color_discrete_sequence=px.colors.sequential.Bluered_r,height = 550, width =1000, markers= True)
+                        color_discrete_sequence=px.colors.sequential. Magenta,height = 550, width =1000, markers= True)
     st.plotly_chart(fig_map_ra)
            
     fig_Ra_geo = px.choropleth(Data_Map_ra_g,
@@ -805,7 +807,7 @@ def Map_Registereduser_Appopens_Q(dataFrame,Quarter):
     Data_Map_ra_Qg.reset_index(inplace = True)
 
     fig_map_ra_Q = px.line(Data_Map_ra_Qg, x= "State", y= ["RegisteredUser","AppOpens"] , title= f"REGISTEREDUSER COUNT OF {Quarter}", 
-                        color_discrete_sequence=px.colors.sequential.Bluered_r, width =1000, markers= True)
+                        color_discrete_sequence=px.colors.sequential. Magenta, width =1000, markers= True)
     st.plotly_chart(fig_map_ra_Q)
     
     fig_Ra_geo_Q = px.choropleth(Data_Map_ra_Qg,
@@ -942,7 +944,6 @@ st.set_page_config(
     page_title="PhonePePlus data Analysis App",
     page_icon="🧊",
     layout="wide",
-    initial_sidebar_state="expanded",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
         'Report a bug': "https://www.extremelycoolapp.com/bug",
@@ -951,6 +952,13 @@ st.set_page_config(
 )
 st.title('PhonePe Plus :globe_with_meridians:',)
 st.header('THE BEAT OF PROGRESS')
+
+#[theme]
+base="dark"
+primaryColor="#090352"
+backgroundColor="#4b3fef"
+secondaryBackgroundColor="#638ce0"
+
 
 with st.container():
     tab1, tab2, tab3 = st.tabs(["HOME", "EXPLORE DATA", "TOP CHARTS"])
