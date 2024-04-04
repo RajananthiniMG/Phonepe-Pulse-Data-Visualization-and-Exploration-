@@ -961,7 +961,7 @@ secondaryBackgroundColor="#638ce0"
 
 
 with st.container():
-    tab1, tab2, tab3 = st.tabs(["HOME", "EXPLORE DATA", "TOP CHARTS"])
+     tab1, tab2, tab3 = st.tabs([":bank: HOME", ":open_file_folder: EXPLORE DATA", ":bar_chart: TOP CHARTS"])
 
     with tab1:
         
@@ -971,10 +971,10 @@ with st.container():
 
             st.header("PHONEPE",divider = 'gray')
             st.subheader("INDIA'S ONE OF THE BEST TRANSACTION APP")
-            st.subheader("PhonePe is one of India's leading digital payment platforms, offering a wide range of financial services and products to users.",divider = 'gray')
-            st.write("****ABOUT****")
+             st.write("PhonePe is one of India's leading digital payment platforms, offering a wide range of financial services and products to users.",divider = 'gray')
+            st.write("## ABOUT")
             st.write("PhonePe is one of India's leading digital payment platforms, offering a wide range of financial services and products to users.")
-            st.write("****SERVICES OFFERED****")
+            st.write("### SERVICES OFFERED")
             st.write("1. Payments: PhonePe allows users to make various types of digital payments, including peer-to-peer (P2P) transfers, utility bill payments, mobile recharges, and payments at online and offline merchants.")
             st.write("2. UPI (Unfied Payments Interface): PhonePe leverages the UPI infrastructure to facilitate instant bank-to-bank transfers, enabling users to send and receive money using their mobile phones.")
             st.write("3. Banking Services: PhonePe offers banking services such as savings account opening, fixed deposits, and insurance products through partnerships with various banks and financial institutions.")
@@ -987,12 +987,12 @@ with st.container():
         with column2:
 
             st.image(Image.open(r"C:\Users\rajan\OneDrive\Desktop\Phonepe\pulse\New folder\PhonePe-Offers.png"))
-            st.write("**User Base**")
+            st.write("### User Base")
             st.write("PhonePe has rapidly grown its user base since its inception and is among the leading digital payment platforms in India.")
             st.write("As of [latest available data], PhonePe reportedly has over [200 million registered users] and [15 million merchant partners], indicating its widespread adoption among both consumers and businesses.")
 
             st.video(r"C:\Users\rajan\OneDrive\Desktop\Phonepe\pulse\Video\copy_of_recharge_on_phonepe.mp4")
-            st.subheader("****Recharge your phone on PhonePe****",divider = 'gray')
+            st.subheader("# Recharge your phone on PhonePe",divider = 'gray')
             st.write("Need to recharge your prepaid mobile number?")
             st.write("Watch this simple video to understand how it's done.")
             
@@ -1002,23 +1002,22 @@ with st.container():
         with column3:
             
             st.video(r"C:\Users\rajan\OneDrive\Desktop\Phonepe\pulse\Video\1st_Payment.mp4")
-            st.subheader("****Make your first UPI payment****",divider = 'gray')
+            st.subheader("# Make your first UPI payment",divider = 'gray')
             st.write("Watch this simple video to help you get started with UPI payments on PhonePe.")
 
         with column4:
             
-            st.write("**Technology**")
+            st.write("### Technology")
             st.write("PhonePe's platform is built on top of the UPI infrastructure, allowing seamless interoperability with other UPI-enabled apps and banks.")
             st.write("The app employs advanced security measures such as multi-factor authentication, encryption, and secure payment gateways to ensure the safety of user transactions and data.")
-            st.write("**Partnerships**")
+            st.write("### Partnerships")
             st.write("PhonePe has forged strategic partnerships with various companies and merchants to expand its service offerings and enhance user experience.")
             st.write("It has collaborated with leading brands in e-commerce, retail, travel, and other sectors to offer exclusive discounts, cashback offers, and promotional deals to its users.")
-            st.write("**Innovation**")
+            st.write("### Innovation")
             st.write("PhonePe continues to innovate and introduce new features and services to cater to evolving user needs and preferences.")
             st.write("It has launched initiatives such as PhonePe for Business, which provides merchants with tools and solutions to accept digital payments and manage their businesses more efficiently.")
 
 
-        
     with tab2:
 
         select = option_menu('Explore Data',['Aggregated Data','Map Data','Top Data'])
