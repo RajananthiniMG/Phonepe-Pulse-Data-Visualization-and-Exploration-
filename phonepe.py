@@ -50,8 +50,6 @@ Agg_trans['State'] = Agg_trans['State'].str.replace("-"," ")
 Agg_trans['State'] = Agg_trans['State'].str.replace("Andaman & Nicobar Islands","Andaman & Nicobar")
 Agg_trans['State'] = Agg_trans['State'].str.replace("Dadra & Nagar Haveli & Daman & Diu","Dadra and Nagar Haveli and Daman and Diu")
 
-#Here we are declaring the path where we cloned the data from github 
-
 #To get data from Aggregated User here we taking Phone Brand, Phone count and user percentage
 
 Datapath_agg_u = "C:/Users/rajan/OneDrive/Desktop/Phonepe/pulse/data/aggregated/user/country/india/state/" 
@@ -96,8 +94,6 @@ Agg_User['State'] = Agg_User['State'].str.replace("-"," ")
 Agg_User['State'] = Agg_User['State'].str.replace("Andaman & Nicobar Islands","Andaman & Nicobar")
 Agg_User['State'] = Agg_User['State'].str.replace("Dadra & Nagar Haveli & Daman & Diu","Dadra and Nagar Haveli and Daman and Diu")
 
-#Here we are declaring the path where we cloned the data from github 
-
 #To get data from Map transaction here we taking Districts, Transaction count and Transaction amount
 
 Datapath_map_t = "C:/Users/rajan/OneDrive/Desktop/Phonepe/pulse/data/map/transaction/hover/country/india/state/" 
@@ -139,7 +135,6 @@ Map_trans['State'] = Map_trans['State'].str.replace("-"," ")
 Map_trans['State'] = Map_trans['State'].str.replace("Andaman & Nicobar Islands","Andaman & Nicobar")
 Map_trans['State'] = Map_trans['State'].str.replace("Dadra & Nagar Haveli & Daman & Diu","Dadra and Nagar Haveli and Daman and Diu")
 
-#Here we are declaring the path where we cloned the data from github 
 
 #To get data from Map User here we taking Districts, RegisteredUser and AppOpens
 
@@ -182,8 +177,7 @@ Map_user['State'] = Map_user['State'].str.title()
 Map_user['State'] = Map_user['State'].str.replace("-"," ")
 Map_user['State'] = Map_user['State'].str.replace("Andaman & Nicobar Islands","Andaman & Nicobar")
 Map_user['State'] = Map_user['State'].str.replace("Dadra & Nagar Haveli & Daman & Diu","Dadra and Nagar Haveli and Daman and Diu")
-
-#Here we are declaring the path where we cloned the data from github 
+ 
 
 #To get data from Top transaction here we taking Transaction count and Transaction amount details with Pincodes
 
@@ -227,7 +221,6 @@ Top_trans['State'] = Top_trans['State'].str.replace("-"," ")
 Top_trans['State'] = Top_trans['State'].str.replace("Andaman & Nicobar Islands","Andaman & Nicobar")
 Top_trans['State'] = Top_trans['State'].str.replace("Dadra & Nagar Haveli & Daman & Diu","Dadra and Nagar Haveli and Daman and Diu")
 
-#Here we are declaring the path where we cloned the data from github 
 
 #To get data from top User here we taking registereduser detail with picodes
 
@@ -971,7 +964,7 @@ with st.container():
 
             st.header("PHONEPE",divider = 'gray')
             st.subheader("INDIA'S ONE OF THE BEST TRANSACTION APP")
-             st.write("PhonePe is one of India's leading digital payment platforms, offering a wide range of financial services and products to users.",divider = 'gray')
+            st.write("PhonePe is one of India's leading digital payment platforms, offering a wide range of financial services and products to users.")
             st.write("## ABOUT")
             st.write("PhonePe is one of India's leading digital payment platforms, offering a wide range of financial services and products to users.")
             st.write("### SERVICES OFFERED")
